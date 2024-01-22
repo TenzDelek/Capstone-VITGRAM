@@ -1,6 +1,6 @@
 import { Outlet,Navigate } from "react-router-dom"
-
 const Authlayout = () => {
+
   const isauthenticated=false;
   return (
     <>
@@ -11,7 +11,7 @@ const Authlayout = () => {
         <section className=" flex flex-1 justify-center flex-col items-center py-10">
           <Outlet/>
         </section>
-        <img src="/assets/images/side-img.svg" alt="logo"
+        <img src="/assets/images/vit1.png" alt="logo"  draggable="false"
         className=" hidden xl:block  h-screen bg-no-repeat w-1/2  object-cover"/>
       </>
     )}
