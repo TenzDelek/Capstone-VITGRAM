@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import Loader from "@/components/shared/Loader";
 import { Link } from "react-router-dom";
+import { createUserAccount } from "@/lib/appwrite/api";
 
 const Signupform = () => {
   const isloading=false
@@ -34,15 +35,14 @@ const Signupform = () => {
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof SignupValidation>) {
     //create user
-    // const newUser=await createUserAccount(values);
-
-
+    const newUser=await createUserAccount(values);
+    console.log(newUser)
    
   }
   return (
     <Form {...form}>
       <div className=" sm:w-420 flex-center flex-col ">
-        <img src="/assets/images/real.png" alt="logo" />
+        <img src="/assets/images/real.png" draggable="false" alt="logo" />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-2">
           Create a new account
         </h2>
