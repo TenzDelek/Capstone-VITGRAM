@@ -1,4 +1,5 @@
 import { Route,Routes } from 'react-router-dom'
+import { Toaster } from "@/components/ui/toaster"
 import './global.css'
 import Signinform from './_auth/forms/Signinform'
 import { Home } from './_root/pages'
@@ -22,6 +23,7 @@ const App = () => {
         </Route>
       
     </Routes>
+    <Toaster/>
    </main>
   )
 }
